@@ -26,7 +26,7 @@ or
 
 and play.
 
-![Screenshot](./Adventure_game_screenshot.PNG "Sceenshot of the introductory text")
+![Screenshot](./Adventure_Game.gif "Screencast of the introductory text")
 ___
 
 **LICENSE**
