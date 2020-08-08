@@ -1,6 +1,7 @@
 import time
 import random
 import sys
+from os import system, name
 
 
 def print_with_delay(statement_to_print):
@@ -236,6 +237,20 @@ def start_over():
     ask_for_replay()
 
 
+def clear(): 
+    '''
+    It clears the screen from the previous output in order to start fresh
+    when the player decides to play again.
+    Credit: https://www.geeksforgeeks.org/clear-screen-python/
+    '''
+    # for windows 
+    if name == 'nt': 
+        _ = system('cls') 
+    # for mac and linux(here, os.name is 'posix') 
+    else: 
+        _ = system('clear')
+
+
 def ask_for_replay():
     '''
     Runs after the end of the game. 
@@ -245,6 +260,7 @@ def ask_for_replay():
         print("Do you want to play again?\n")
         response = input("Yes or No?\n").lower()
         if response == "yes":
+            clear()
             start_over()
             break
         elif response == "no":
