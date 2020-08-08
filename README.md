@@ -1,9 +1,10 @@
 # Adventure Game
 A simple version of an old-fashioned text-based adventure game, done in Python.
+Part of the projects for the Intro to Programming Nanodegree (2020) by Udacity.
 
 **DESCRIPTION**
 
-This is only a very short game with a couple of choices available to the player. This was done on purpose, to keep it simple. If we were making a complete game, we would expand it a great deal, and probably give the player a whole world to explore. But for this project, the idea is to focus on some key things that we need if want to make a working game:
+This is only a very short game with a couple of choices available to the player. This was done on purpose, to keep it simple. If we were making a complete game, we would expand it a great deal, and probably give the player a whole world to explore. But for this project, the idea is to focus on some key things that we need if we want to make a working game:
 
 - The game gives players a description of what's happening, and then asks them to make a choice.
 - Something different happens depending on the choice the player made.
@@ -25,12 +26,12 @@ or
 ```python3 Adventure_Game.py```
 
 and play.
-
-![Screenshot](./Adventure_Game.gif "Screencast of the introductory text")
 ___
 
-**LICENSE**
+**SCREENSHOT**
 
-[MIT](https://github.com/dimikara/Adventure_Game/blob/master/LICENSE) License.
+![Screenshot](./Adventure_Game.gif "Screencast of the introductory text")
 
-Copyright (c) 2020 Dimitra Karamperi
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
