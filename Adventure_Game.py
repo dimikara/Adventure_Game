@@ -10,12 +10,12 @@ def print_with_delay(statement_to_print):
 
 
 def scenario1(scenario1_statements):
-    '''Statements of the first defeat scenario (list)'''
+    '''Prints the statements of the first defeat scenario (list)'''
     print_with_delay(scenario1_statements)
 
 
 def scenario2(scenario2_statements):
-    '''Statements of the second defeat scenario (list)'''
+    '''Prints the statements of the second defeat scenario (list)'''
     print_with_delay(scenario2_statements)
 
 starting_statements = [
@@ -90,7 +90,7 @@ def random_defeat_scenario():
     '''
     When the player makes a bad choice at the beginning and therefore loses,
     the defeat scenario is decided in a random way.
-    This is only one way to fullfill the requirement to have a result that
+    This is only a way to fullfill the requirement to have a result that
     comes from player's choice but also an element of randomness in the plot.
     '''
     x = random.randint(1, 3)
@@ -120,19 +120,19 @@ win_statements3 = [
 
 
 def win1(win_statements1):
-    '''Statements of the first winning scenario (list)'''
+    '''Prints the statements of the first winning scenario (list)'''
     for statement in win_statements2:
         print_with_delay(statement)
 
 
 def win2(win_statements2):
-    '''Statements of the second winning scenario (list)'''
+    '''Prints the statements of the second winning scenario (list)'''
     for statement in win_statements2:
         print_with_delay(statement)
 
 
 def win3(win_statements3):
-    '''Statements of the third winning scenario (list)'''
+    '''Prints the statements of the third winning scenario (list)'''
     for statement in win_statements3:
         print_with_delay(statement)
 
@@ -151,7 +151,7 @@ def random_win_scenario():
     '''
     When the player makes a good choice at the beginning and therefore wins,
     the win scenario is decided in a random way.
-    This is again only one way to fullfill the requirement to have a result that
+    This is again only a way to fullfill the requirement to have a result that
     comes from player's choice but also an element of randomness in the plot.
     '''
     x = random.randint(1, 3)
@@ -222,6 +222,7 @@ def print_like_typewriter(the_end):
 
 
 def goodbye():
+    '''Prints the message below when the player does not want to play again.'''
     print_with_delay("\nHope to see you again!\n")
     print_like_typewriter("===============\n")
     print_like_typewriter("TO BE CONTINUED\n")
@@ -229,12 +230,17 @@ def goodbye():
 
 
 def start_over():
+    '''Runs when the player decides to play again.'''
     play_game()
     decide_win_or_defeat()
     ask_for_replay()
 
 
 def ask_for_replay():
+    '''
+    Runs after the end of the game. 
+    The player can choose to play again or not.
+    '''
     while True:
         print("Do you want to play again?\n")
         response = input("Yes or No?\n").lower()
