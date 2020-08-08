@@ -17,7 +17,7 @@ ___
 **INSTRUCTIONS**
 
 You must have Python installed in your computer in order to play the game.
-Copy the file Adventure_Game.py (6KB) in your computer, go to the folder where you copied the file and open a terminal window. Type:
+Copy the file Adventure_Game.py (8KB) in your computer, go to the folder where you copied the file and open a terminal window. Type:
 
 ```python Adventure_Game.py```
 
