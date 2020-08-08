@@ -4,15 +4,18 @@ import sys
 
 
 def print_with_delay(statement_to_print):
+    '''Takes a statement and prints it with delay'''
     print(statement_to_print)
     time.sleep(2)
 
 
 def scenario1(scenario1_statements):
+    '''Statements of the first defeat scenario (list)'''
     print_with_delay(scenario1_statements)
 
 
 def scenario2(scenario2_statements):
+    '''Statements of the second defeat scenario (list)'''
     print_with_delay(scenario2_statements)
 
 starting_statements = [
@@ -55,27 +58,41 @@ game_over_statements3 = [
 
 
 def game_end1(game_over_statements1):
+    '''Prints the statements of the first possible game over case'''
     for statement in game_over_statements1:
         print_with_delay(statement)
 
 
 def game_end2(game_over_statements2):
+    '''Prints the statements of the second possible game over case'''
     for statement in game_over_statements2:
         print_with_delay(statement)
 
 
 def game_end3(game_over_statements3):
+    '''Prints the statements of the third possible game over case'''
     for statement in game_over_statements3:
         print_with_delay(statement)
 
 
 def end_with_defeat():
+    '''
+    Prints the "Game Over" sign when the player loses.
+    This is printed after displaying of game_over_statements
+    and resembles to the way older console/pc games ended.
+    '''
     print_like_typewriter("=========\n")
     print_like_typewriter("GAME OVER\n")
     print_like_typewriter("=========\n")
 
 
 def random_defeat_scenario():
+    '''
+    When the player makes a bad choice at the beginning and therefore loses,
+    the defeat scenario is decided in a random way.
+    This is only one way to fullfill the requirement to have a result that
+    comes from player's choice but also an element of randomness in the plot.
+    '''
     x = random.randint(1, 3)
     if x == 1:
         game_end1(game_over_statements1)
@@ -103,27 +120,40 @@ win_statements3 = [
 
 
 def win1(win_statements1):
+    '''Statements of the first winning scenario (list)'''
     for statement in win_statements2:
         print_with_delay(statement)
 
 
 def win2(win_statements2):
+    '''Statements of the second winning scenario (list)'''
     for statement in win_statements2:
         print_with_delay(statement)
 
 
 def win3(win_statements3):
+    '''Statements of the third winning scenario (list)'''
     for statement in win_statements3:
         print_with_delay(statement)
 
 
 def end_with_win():
+    '''
+    Prints the "THE END" sign when the player wins.
+    This is printed after displaying of win_statements.
+    '''
     print_like_typewriter("=======\n")
     print_like_typewriter("THE END\n")
     print_like_typewriter("=======\n")
 
 
 def random_win_scenario():
+    '''
+    When the player makes a good choice at the beginning and therefore wins,
+    the win scenario is decided in a random way.
+    This is again only one way to fullfill the requirement to have a result that
+    comes from player's choice but also an element of randomness in the plot.
+    '''
     x = random.randint(1, 3)
     if x == 1:
         win1(win_statements1)
@@ -135,6 +165,12 @@ def random_win_scenario():
 
 
 def play_game():
+    '''
+    This is the main function of the game.
+    After displaying the starting statements, the player must make
+    their first and decisive choice that will define whether they win or lose.
+    "decision" is a global variable so that it can be used in the next function.
+    '''
     global decision
     for statement in starting_statements:
         print_with_delay(statement)
@@ -159,6 +195,11 @@ def play_game():
 
 
 def decide_win_or_defeat():
+    '''
+    It takes the global variable "decision" that comes from
+    the play_game() function and then decides win or defeat, and
+    runs the relevant function. 
+    '''
     if decision == 1:
         random_defeat_scenario()
     elif decision == 2:
@@ -169,6 +210,11 @@ def decide_win_or_defeat():
 
 # https://stackoverflow.com/questions/9246076/how-to-print-one-character-at-a-time-on-one-line
 def print_like_typewriter(the_end):
+    '''
+    A very primitive, special effect to make characters appear in the screen
+    as if they are written with a typewriter.
+    TODO: Maybe also add the sound some time in the future.
+    '''
     for character in the_end:
         sys.stdout.write(character)
         sys.stdout.flush()
