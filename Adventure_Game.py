@@ -5,18 +5,45 @@ from os import system, name
 
 
 def print_with_delay(statement_to_print):
-    '''Takes a statement and prints it with delay'''
+    '''
+    Takes a statement and prints it with delay.
+
+    Args:
+        statement_to_print (string): The statement to print.
+    
+    Returns:
+        The statement displayed with delay.
+    '''
+
     print(statement_to_print)
     time.sleep(2)
 
 
 def scenario1(scenario1_statements):
-    '''Prints the statements of the first defeat scenario (list)'''
+    '''
+    Prints the statements of the first defeat scenario.
+    
+    Args:
+        scenario1_statements (list): The statements of the first defeat scenario.
+    
+    Returns:
+        The list of the statements of the first defeat scenario.
+    '''
+
     print_with_delay(scenario1_statements)
 
 
 def scenario2(scenario2_statements):
-    '''Prints the statements of the second defeat scenario (list)'''
+    '''
+    Prints the statements of the second defeat scenario.
+    
+    Args:
+        scenario2_statements (list): The statements of the second defeat scenario.
+    
+    Returns:
+        The list of the statements of the second defeat scenario.
+    '''
+    
     print_with_delay(scenario2_statements)
 
 starting_statements = [
@@ -59,19 +86,46 @@ game_over_statements3 = [
 
 
 def game_end1(game_over_statements1):
-    '''Prints the statements of the first possible game over case'''
+    '''
+    Prints the statements of the first possible game over case.
+    
+    Args:
+        game_over_statements1 (list): The statements of the first possible game over case.
+    
+    Returns:
+        The list of the statements of the first possible game over case.    
+    '''
+
     for statement in game_over_statements1:
         print_with_delay(statement)
 
 
 def game_end2(game_over_statements2):
-    '''Prints the statements of the second possible game over case'''
+    '''
+    Prints the statements of the second possible game over case.
+    
+    Args:
+        game_over_statements1 (list): The statements of the second possible game over case.
+    
+    Returns:
+        The list of the statements of the second possible game over case.
+    '''
+
     for statement in game_over_statements2:
         print_with_delay(statement)
 
 
 def game_end3(game_over_statements3):
-    '''Prints the statements of the third possible game over case'''
+    '''
+    Prints the statements of the third possible game over case.
+    
+    Args:
+        game_over_statements1 (list): The statements of the third possible game over case.
+    
+    Returns:
+        The list of the statements of the third possible game over case.
+    '''
+
     for statement in game_over_statements3:
         print_with_delay(statement)
 
@@ -79,9 +133,15 @@ def game_end3(game_over_statements3):
 def end_with_defeat():
     '''
     Prints the "Game Over" sign when the player loses.
-    This is printed after displaying of game_over_statements
-    and resembles to the way older console/pc games ended.
+    It is printed after displaying of game_over_statements.
+
+    Args:
+        -
+    
+    Returns:
+        The "Game Over" sign in a way that resembles the way older console/pc games ended.
     '''
+    
     print_like_typewriter("=========\n")
     print_like_typewriter("GAME OVER\n")
     print_like_typewriter("=========\n")
