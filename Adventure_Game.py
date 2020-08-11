@@ -139,7 +139,7 @@ def end_with_defeat():
         -
     
     Returns:
-        The "Game Over" sign in a way that resembles the way older console/pc games ended.
+        The "Game Over" sign, displayed on the screen as if it is written in a typewriter.
     '''
     
     print_like_typewriter("=========\n")
@@ -153,7 +153,13 @@ def random_defeat_scenario():
     the defeat scenario is decided in a random way.
     This is only a way to fullfill the requirement to have a result that
     comes from player's choice but also an element of randomness in the plot.
+
+    Args:
+        -
+    Returns:
+        The statements of the randomly chosen defeat scenario.
     '''
+
     x = random.randint(1, 3)
     if x == 1:
         game_end1(game_over_statements1)
@@ -181,19 +187,46 @@ win_statements3 = [
 
 
 def win1(win_statements1):
-    '''Prints the statements of the first winning scenario (list)'''
+    '''
+    Prints the statements of the first winning scenario.
+    
+    Args:
+        win_statements1 (list): The statements of the first winning scenario.
+    
+    Returns:
+        The list of the statements of the first winning scenario.
+    '''
+
     for statement in win_statements2:
         print_with_delay(statement)
 
 
 def win2(win_statements2):
-    '''Prints the statements of the second winning scenario (list)'''
+    '''
+    Prints the statements of the second winning scenario 
+    
+    Args:
+        win_statements2 (list): The statements of the second winning scenario.
+    
+    Returns:
+        The list of the statements of the second winning scenario.
+    '''
+
     for statement in win_statements2:
         print_with_delay(statement)
 
 
 def win3(win_statements3):
-    '''Prints the statements of the third winning scenario (list)'''
+    '''
+    Prints the statements of the third winning scenario.
+    
+    Args:
+        win_statements3 (list): The statements of the third winning scenario.
+    
+    Returns:
+        The list of the statements of the third winning scenario.
+    '''
+
     for statement in win_statements3:
         print_with_delay(statement)
 
@@ -201,7 +234,13 @@ def win3(win_statements3):
 def end_with_win():
     '''
     Prints the "THE END" sign when the player wins.
-    This is printed after displaying of win_statements.
+    It is printed after displaying of win_statements.
+    
+    Args:
+        -
+    
+    Returns:
+        The "THE END" sign, displayed on the screen as if it is written in a typewriter.
     '''
     print_like_typewriter("=======\n")
     print_like_typewriter("THE END\n")
@@ -212,9 +251,14 @@ def random_win_scenario():
     '''
     When the player makes a good choice at the beginning and therefore wins,
     the win scenario is decided in a random way.
-    This is again only a way to fullfill the requirement to have a result that
-    comes from player's choice but also an element of randomness in the plot.
+    
+    Args:
+        -
+
+    Returns:
+        The statements of the randomly chosen winning scenario.
     '''
+
     x = random.randint(1, 3)
     if x == 1:
         win1(win_statements1)
@@ -231,7 +275,14 @@ def play_game():
     After displaying the starting statements, the player must make
     their first and decisive choice that will define whether they win or lose.
     "decision" is a global variable so that it can be used in the next function.
+
+    Args:
+        -
+
+    Returns:
+        Starts the game.
     '''
+
     global decision
     for statement in starting_statements:
         print_with_delay(statement)
@@ -259,8 +310,17 @@ def decide_win_or_defeat():
     '''
     It takes the global variable "decision" that comes from
     the play_game() function and then decides win or defeat, and
-    runs the relevant function. 
+    runs the relevant function.
+
+    Args:
+        -
+
+    Returns:
+        The statements of the random win or defeat scenario, 
+        depending on whether the player won or lost.
+
     '''
+
     if decision == 1:
         random_defeat_scenario()
     elif decision == 2:
@@ -273,7 +333,7 @@ def decide_win_or_defeat():
 def print_like_typewriter(the_end):
     '''
     A very primitive, special effect to make characters appear in the screen
-    as if they are written with a typewriter.
+    as if they are written in a typewriter.
     TODO: Maybe also add the sound some time in the future.
     '''
     for character in the_end:
