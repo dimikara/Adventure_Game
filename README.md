@@ -2,7 +2,7 @@
 A simple version of an old-fashioned text-based adventure game, done in Python.
 Part of the projects for the Intro to Programming Nanodegree (2020) by Udacity.
 
-**DESCRIPTION**
+## Description
 
 This is only a very short game with a couple of choices available to the player. This was done on purpose, to keep it simple. If we were making a complete game, we would expand it a great deal, and probably give the player a whole world to explore. But for this project, the idea is to focus on some key things that we need if we want to make a working game:
 
@@ -14,7 +14,7 @@ This is only a very short game with a couple of choices available to the player.
 
 ___
 
-**INSTRUCTIONS**
+## Instructions
 
 You must have Python installed in your computer in order to play the game.
 Copy the file Adventure_Game.py (8KB) in your computer, go to the folder where you copied the file and open a terminal window. Type:
@@ -28,9 +28,20 @@ or
 and play.
 ___
 
-**SCREENSHOT**
+## Screenshot
 
 ![Screenshot](./Adventure_Game.gif "Screencast of the introductory text")
+
+
+___
+
+## Credits
+
+* [How to print one character at a time on one line](https://stackoverflow.com/questions/9246076/how-to-print-one-character-at-a-time-on-one-line) - [*Stack Overflow*](https://stackoverflow.com/)
+* [How to clear the screen from previous output](https://www.geeksforgeeks.org/clear-screen-python/) - [*GeeksforGeeks*](https://www.geeksforgeeks.org/)
+* Licence badge from [Shields.IO](https://shields.io/)
+
+___
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
