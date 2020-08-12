@@ -10,9 +10,6 @@ def print_with_delay(statement_to_print):
 
     Args:
         statement_to_print (string): The statement to print.
-    
-    Returns:
-        The statement displayed with delay.
     '''
 
     print(statement_to_print)
@@ -24,10 +21,7 @@ def scenario1(scenario1_statements):
     Prints the statements of the first defeat scenario.
     
     Args:
-        scenario1_statements (list): The statements of the first defeat scenario.
-    
-    Returns:
-        The list of the statements of the first defeat scenario.
+        scenario1_statements (list): The statements of the first defeat scenario.    
     '''
 
     print_with_delay(scenario1_statements)
@@ -39,9 +33,6 @@ def scenario2(scenario2_statements):
     
     Args:
         scenario2_statements (list): The statements of the second defeat scenario.
-    
-    Returns:
-        The list of the statements of the second defeat scenario.
     '''
     
     print_with_delay(scenario2_statements)
@@ -91,10 +82,7 @@ def game_end1(game_over_statements1):
     
     Args:
         game_over_statements1 (list): The statements of the first possible game over case.
-    
-    Returns:
-        The list of the statements of the first possible game over case.    
-    '''
+   '''
 
     for statement in game_over_statements1:
         print_with_delay(statement)
@@ -106,9 +94,6 @@ def game_end2(game_over_statements2):
     
     Args:
         game_over_statements1 (list): The statements of the second possible game over case.
-    
-    Returns:
-        The list of the statements of the second possible game over case.
     '''
 
     for statement in game_over_statements2:
@@ -121,9 +106,6 @@ def game_end3(game_over_statements3):
     
     Args:
         game_over_statements1 (list): The statements of the third possible game over case.
-    
-    Returns:
-        The list of the statements of the third possible game over case.
     '''
 
     for statement in game_over_statements3:
@@ -137,9 +119,6 @@ def end_with_defeat():
 
     Args:
         -
-    
-    Returns:
-        The "Game Over" sign, displayed on the screen as if it is written in a typewriter.
     '''
     
     print_like_typewriter("=========\n")
@@ -156,8 +135,6 @@ def random_defeat_scenario():
 
     Args:
         -
-    Returns:
-        The statements of the randomly chosen defeat scenario.
     '''
 
     x = random.randint(1, 3)
@@ -192,9 +169,6 @@ def win1(win_statements1):
     
     Args:
         win_statements1 (list): The statements of the first winning scenario.
-    
-    Returns:
-        The list of the statements of the first winning scenario.
     '''
 
     for statement in win_statements2:
@@ -207,9 +181,6 @@ def win2(win_statements2):
     
     Args:
         win_statements2 (list): The statements of the second winning scenario.
-    
-    Returns:
-        The list of the statements of the second winning scenario.
     '''
 
     for statement in win_statements2:
@@ -222,9 +193,6 @@ def win3(win_statements3):
     
     Args:
         win_statements3 (list): The statements of the third winning scenario.
-    
-    Returns:
-        The list of the statements of the third winning scenario.
     '''
 
     for statement in win_statements3:
@@ -238,10 +206,8 @@ def end_with_win():
     
     Args:
         -
-    
-    Returns:
-        The "THE END" sign, displayed on the screen as if it is written in a typewriter.
     '''
+
     print_like_typewriter("=======\n")
     print_like_typewriter("THE END\n")
     print_like_typewriter("=======\n")
@@ -254,9 +220,6 @@ def random_win_scenario():
     
     Args:
         -
-
-    Returns:
-        The statements of the randomly chosen winning scenario.
     '''
 
     x = random.randint(1, 3)
@@ -280,7 +243,7 @@ def play_game():
         -
 
     Returns:
-        Starts the game.
+        decision(int): The input of player; it can be either 1 or 2.
     '''
 
     global decision
@@ -314,11 +277,6 @@ def decide_win_or_defeat():
 
     Args:
         -
-
-    Returns:
-        The statements of the random win or defeat scenario, 
-        depending on whether the player won or lost.
-
     '''
 
     if decision == 1:
@@ -336,10 +294,6 @@ def print_like_typewriter(the_end):
 
     Args:
         the_end (string): "THE END", "GAME OVER" or "TO BE CONTINUED" messages.
-
-    Returns:
-        The string text displayed on screen as if it is written in a typewriter.
-
     '''
     
     for character in the_end:
@@ -354,9 +308,6 @@ def goodbye():
 
     Args: 
         -
-    Returns:
-        A message when the player does not want to play again.
-
     '''
     
     print_with_delay("\nHope to see you again!\n")
@@ -370,8 +321,6 @@ def start_over():
     Runs when the player decides to play again.
     
     Args:
-        -
-    Returns:
         -
     '''
     
@@ -387,10 +336,6 @@ def clear():
 
     Args:
         -
-
-    Returns:
-        -
-
     '''
     
     # for windows 
@@ -407,8 +352,6 @@ def ask_for_replay():
     The player can choose to play again or not.
 
     Args:
-        -
-    Returns:
         -
     '''
     
