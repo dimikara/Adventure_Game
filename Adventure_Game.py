@@ -19,9 +19,10 @@ def print_with_delay(statement_to_print):
 def scenario1(scenario1_statements):
     '''
     Prints the statements of the first defeat scenario.
-    
+
     Args:
-        scenario1_statements (list): The statements of the first defeat scenario.    
+        scenario1_statements (list): The statements of the first
+        defeat scenario.    
     '''
 
     print_with_delay(scenario1_statements)
@@ -30,9 +31,10 @@ def scenario1(scenario1_statements):
 def scenario2(scenario2_statements):
     '''
     Prints the statements of the second defeat scenario.
-    
+
     Args:
-        scenario2_statements (list): The statements of the second defeat scenario.
+        scenario2_statements (list): The statements of the second
+        defeat scenario.
     '''
     
     print_with_delay(scenario2_statements)
@@ -81,7 +83,8 @@ def game_end1(game_over_statements1):
     Prints the statements of the first possible game over case.
     
     Args:
-        game_over_statements1 (list): The statements of the first possible game over case.
+        game_over_statements1 (list): The statements of the first
+        possible game over case.
    '''
 
     for statement in game_over_statements1:
@@ -93,7 +96,8 @@ def game_end2(game_over_statements2):
     Prints the statements of the second possible game over case.
     
     Args:
-        game_over_statements1 (list): The statements of the second possible game over case.
+        game_over_statements1 (list): The statements of the second
+        possible game over case.
     '''
 
     for statement in game_over_statements2:
@@ -105,7 +109,8 @@ def game_end3(game_over_statements3):
     Prints the statements of the third possible game over case.
     
     Args:
-        game_over_statements1 (list): The statements of the third possible game over case.
+        game_over_statements1 (list): The statements of the third
+        possible game over case.
     '''
 
     for statement in game_over_statements3:
