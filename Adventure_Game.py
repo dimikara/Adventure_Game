@@ -309,7 +309,7 @@ def play_game():
 def decide_win_or_defeat():
     '''
     It takes the global variable "decision" that comes from
-    the play_game() function and then decides win or defeat, and
+    the play_game() function, decides win or defeat, and
     runs the relevant function.
 
     Args:
@@ -329,13 +329,19 @@ def decide_win_or_defeat():
         print("Ops, something went wrong.")
 
 
-# https://stackoverflow.com/questions/9246076/how-to-print-one-character-at-a-time-on-one-line
 def print_like_typewriter(the_end):
     '''
     A very primitive, special effect to make characters appear in the screen
     as if they are written in a typewriter.
-    TODO: Maybe also add the sound some time in the future.
+
+    Args:
+        the_end (string): "THE END", "GAME OVER" or "TO BE CONTINUED" messages.
+
+    Returns:
+        The string text displayed on screen as if it is written in a typewriter.
+
     '''
+    
     for character in the_end:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -343,7 +349,16 @@ def print_like_typewriter(the_end):
 
 
 def goodbye():
-    '''Prints the message below when the player does not want to play again.'''
+    '''
+    Prints the message below when the player does not want to play again.
+
+    Args: 
+        -
+    Returns:
+        A message when the player does not want to play again.
+
+    '''
+    
     print_with_delay("\nHope to see you again!\n")
     print_like_typewriter("===============\n")
     print_like_typewriter("TO BE CONTINUED\n")
@@ -351,7 +366,15 @@ def goodbye():
 
 
 def start_over():
-    '''Runs when the player decides to play again.'''
+    '''
+    Runs when the player decides to play again.
+    
+    Args:
+        -
+    Returns:
+        -
+    '''
+    
     play_game()
     decide_win_or_defeat()
     ask_for_replay()
@@ -361,8 +384,15 @@ def clear():
     '''
     It clears the screen from the previous output in order to start fresh
     when the player decides to play again.
-    Credit: https://www.geeksforgeeks.org/clear-screen-python/
+
+    Args:
+        -
+
+    Returns:
+        -
+
     '''
+    
     # for windows 
     if name == 'nt': 
         _ = system('cls') 
@@ -375,7 +405,13 @@ def ask_for_replay():
     '''
     Runs after the end of the game. 
     The player can choose to play again or not.
+
+    Args:
+        -
+    Returns:
+        -
     '''
+    
     while True:
         print("Do you want to play again?\n")
         response = input("Yes or No?\n").lower()
